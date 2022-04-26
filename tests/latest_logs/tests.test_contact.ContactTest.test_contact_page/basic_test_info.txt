@@ -1,0 +1,16 @@
+test_contact.py::ContactTest::test_contact_page
+--------------------------------------------------------------------
+Last Page: https://practice.automationbro.com/contact/
+  Browser: chrome (100.0.4896.127 / headless)
+   Driver: chromedriver (100.0.4896.60)
+Timestamp: 1650992870  (Unix Timestamp)
+     Date: Tuesday, 26 April 2022
+     Time: 7:07:50 PM  (CEST, UTC+01:00)
+--------------------------------------------------------------------
+Traceback: File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 676, in run
+    self._callTestMethod(testMethod)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 633, in _callTestMethod
+    method()
+  File "/Users/janadamhalama/PycharmProjects/seleniumpython/tests/test_contact.py", line 31, in test_contact_page
+    self.assert_text(ContactPage.submit_message_text, ContactPage.submit_message_tag)
+Exception: type object 'ContactPage' has no attribute 'submit_message_tag'

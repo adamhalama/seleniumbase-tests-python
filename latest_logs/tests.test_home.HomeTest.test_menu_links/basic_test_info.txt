@@ -1,0 +1,16 @@
+test_home.py::HomeTest::test_menu_links
+--------------------------------------------------------------------
+Last Page: data:,
+  Browser: chrome (100.0.4896.127)
+   Driver: chromedriver (100.0.4896.60)
+Timestamp: 1650919656  (Unix Timestamp)
+     Date: Monday, 25 April 2022
+     Time: 10:47:36 PM  (CEST, UTC+01:00)
+--------------------------------------------------------------------
+Traceback: File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 676, in run
+    self._callTestMethod(testMethod)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/unittest/case.py", line 633, in _callTestMethod
+    method()
+  File "/Users/janadamhalama/PycharmProjects/seleniumpython/tests/test_home.py", line 42, in test_menu_links
+    expectedLinks = json.loads(open("expectedLinks.json").read())
+Exception: [Errno 2] No such file or directory: 'expectedLinks.json'
