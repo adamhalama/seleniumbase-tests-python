@@ -72,19 +72,3 @@ class HomeTest(HomePage):
         for idx, link in enumerate(menuLinks):
             # print(idx, link.text)
             self.assert_equal(expectedLinks[idx], link.text)
-
-
-def logIn(self : HomeTest):
-    url = "https://practice.automationbro.com/my-account/"
-    self.open(url)
-    self.add_text("#username", "testuser5532")
-    self.add_text("#password", "Sa9DAKicbB6UtJg")
-    self.click("button[name=login]")
-    self.assert_text("Log out", ".woocommerce-MyAccount-content")
-
-
-def logOut(self : HomeTest):
-    url = "https://practice.automationbro.com/my-account/"
-    self.open(url)
-    self.click(".woocommerce-MyAccount-content a[href*=logout]")
-    self.assert_element_visible("button[name=login]")

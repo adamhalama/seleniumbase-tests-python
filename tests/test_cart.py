@@ -1,3 +1,5 @@
+from selenium.common.exceptions import NoSuchElementException
+
 from page_objects.cart_page import CartPage
 from selenium.webdriver.common.keys import Keys
 
@@ -12,7 +14,7 @@ class CartTest(CartPage):
 
 
     def test_add_to_cart(self):
-        pass
+
         # add item to cart
         self.click(self.converse_add_to_cart_btn)
 
@@ -39,9 +41,14 @@ class CartTest(CartPage):
         # self.wait(4)
 
         # wait for loading to be completed
-        self.wait_for_element_visible(self.loading_overlay)
-        self.wait_for_element_not_visible(self.loading_overlay)
+        try:
+            self.wait_for_element_visible(self.loading_overlay)
+        except NoSuchElementException:
+            pass
+            # since we don't care if this element is really here,
+            # we just want to ensure that if it is, we wait
 
+        self.wait_for_element_not_visible(self.loading_overlay)
 
         # wait for the text to change to specified
         # self.wait_for_text("$300.00", self.subtotal_text)
