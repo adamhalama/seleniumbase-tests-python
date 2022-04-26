@@ -59,7 +59,7 @@ class HomeTest(HomePage):
         print(self.get_text(HomePage.copyright_text))
 
     def test_menu_links(self):
-        expectedLinks = json.loads(open("expectedLinks.json").read())
+        expectedLinks = json.loads(open("./tests/expectedLinks.json").read())
         print(expectedLinks)
 
         # li[id*=menu-item]

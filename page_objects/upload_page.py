@@ -3,7 +3,7 @@ from seleniumbase import BaseCase
 
 class UploadPage(BaseCase):
 
-    logo_file_path = "../data/logo.jpg"
+    logo_file_path = "./data/logo.jpg"
 
     upload_file_tag_simple = "#file-upload"
     click_button_tag_simple = "#file-submit"
